@@ -1,0 +1,23 @@
+.title {
+  text-align: center;
+  color: rgb(102, 102, 102);
+  width: 50%;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  margin: auto;
+  padding: 8px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 10px;
+}
+.box {
+  background-color: rgb(231, 231, 231);
+  border: 5px solid #858585;
+  border-radius: 3px;
+  margin: 5px;
+  height: 42vh;
+}
