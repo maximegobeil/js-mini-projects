@@ -2,19 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript Projects</title>
-    <link
-      rel="stylesheet"
-      href="styles.css"
-    />
-    <script
-      src="script.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div>
@@ -24,8 +15,36 @@
     <div class="container">
       <div class="memory box">memory</div>
       <div class="rock box">rock</div>
-      <div class="quizz box">quizz</div>
-      <div class="counter box">counter</div>
+      <!-- HTML for Quizz project -->
+      <div class="quizz">
+        <div class="card">
+          <div id="quiz-container">
+            <div id="question-container">
+              <h3 id="question"></h3>
+            </div>
+            <div id="options-container">
+              <input type="radio" name="answer" id="option1" />
+              <label for="option1" id="label1" class="radio"></label><br />
+              <input type="radio" name="answer" id="option2" />
+              <label for="option2" id="label2" class="radio"></label><br />
+              <input type="radio" name="answer" id="option3" />
+              <label for="option3" id="label3" class="radio"></label><br />
+            </div>
+            <button id="next-button">Next</button>
+          </div>
+          <div id="result-container">
+            <p id="quiz-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HTML for Counter project -->
+      <div class="counter">
+        <h2 id="result">0</h2>
+        <button class="button" id="upButton">Add 1</button>
+        <button class="button" id="downButton">Remove 1</button>
+        <button class="button" id="resetButton">Reset</button>
+      </div>
     </div>
   </body>
 </html>

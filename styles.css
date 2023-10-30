@@ -1,3 +1,61 @@
+.card {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  max-width: 290px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  padding: 25px;
+}
+
+.radio {
+  color: #266db6;
+}
+#question {
+  color: #266db6;
+  font-weight: bold;
+}
+
+#next-button {
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+  margin-top: 20px;
+}
+
+#next-button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+#next-button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+#next-button:hover::before {
+  width: 250%;
+}
+
 .title {
   text-align: center;
   color: rgb(102, 102, 102);
@@ -12,12 +70,71 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  justify-items: center;
   margin: 10px;
 }
 .box {
-  background-color: rgb(231, 231, 231);
   border: 5px solid #858585;
   border-radius: 3px;
   margin: 5px;
-  height: 42vh;
+}
+
+h2 {
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  color: #266db6;
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  border: 4px solid #6dcff6;
+  border-radius: 5px;
+  padding-bottom: 25px;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #266db6;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  margin-top: 20px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:active {
+  outline: 0;
+}
+
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:before {
+  background-color: #d5edf6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.button:hover:before {
+  background-color: #6dcff6;
 }
