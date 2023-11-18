@@ -44,6 +44,17 @@
   border-radius: 5px;
 }
 
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  border: 4px solid #6dcff6;
+  border-radius: 5px;
+  padding-bottom: 25px;
+  margin: 1rem;
+}
+
 .radio {
   color: #266db6;
 }
@@ -104,16 +115,6 @@ h2 {
   text-align: center;
 }
 
-.counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-  border: 4px solid #6dcff6;
-  border-radius: 5px;
-  padding-bottom: 25px;
-}
-
 .button {
   background-color: transparent;
   border: 1px solid #266db6;
@@ -165,7 +166,6 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 20vw;
   height: 8vh;
 }
 
@@ -266,4 +266,10 @@ h2 {
 }
 .memory-input-container {
   display: flex;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
