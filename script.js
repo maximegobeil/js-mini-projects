@@ -8,7 +8,7 @@ function randomNumber(level) {
 }
 
 function startMemoryGame() {
-  if (document.getElementById("displayNumber").innerHTML == "Select a level") {
+  if (document.getElementById("display-number").innerHTML == "Select a level") {
     return;
   }
   document.getElementById("ready").style.display = "none";
@@ -16,7 +16,7 @@ function startMemoryGame() {
 }
 
 function checkNumber() {
-  let userInput = document.getElementById("userNumber").value;
+  const userInput = document.getElementById("user-number").value;
   if (userInput == generatedNumber) {
     document.getElementById("memory-result").innerHTML = "Correct";
   } else {
@@ -28,14 +28,14 @@ function resetMemoryGame() {
   document.getElementById("ready").style.display = "flex";
   document.getElementById("user-input").style.display = "none";
   document.getElementById("memory-result").innerHTML = "";
-  document.getElementById("userNumber").value = "";
-  document.getElementById("displayNumber").innerHTML = "Select a level";
+  document.getElementById("user-number").value = "";
+  document.getElementById("display-number").innerHTML = "Select a level";
 }
 
-var memoryLvl = document.querySelectorAll('input[name="number"]');
+const memoryLvl = document.querySelectorAll('input[name="level"]');
 memoryLvl.forEach((element) => {
   element.addEventListener("click", () => {
-    document.getElementById("displayNumber").innerHTML = randomNumber(
+    document.getElementById("display-number").innerHTML = randomNumber(
       element.value
     );
   });
@@ -47,10 +47,12 @@ let playerScore = 0;
 let computerScore = 0;
 
 function setScore() {
-  document.getElementById("player-score").textContent =
-    "Player: " + playerScore;
-  document.getElementById("computer-score").textContent =
-    "CPU: " + computerScore;
+  document.getElementById(
+    "player-score"
+  ).textContent = `Player: ${playerScore}`;
+  document.getElementById(
+    "computer-score"
+  ).textContent = `CPU: ${computerScore}`;
 }
 
 function computerPlay() {
@@ -78,8 +80,9 @@ function comparePlay(playerSelection) {
   }
   if (result === "Win") playerScore++;
   else if (result === "Lose") computerScore++;
-  document.getElementById("rock-result").innerHTML =
-    result + " , P: " + playerSelection + " C: " + computerSelection;
+  document.getElementById(
+    "rock-result"
+  ).innerHTML = `${result}, P: ${playerSelection}, C: ${computerSelection}`;
   setScore();
 }
 
@@ -184,4 +187,4 @@ document
   .getElementById("resetButton")
   .addEventListener("click", () => changeCounter(-counter));
 
-updateCounter(); // Initial update
+updateCounter();

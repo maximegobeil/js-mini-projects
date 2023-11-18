@@ -9,40 +9,40 @@
   </head>
   <body>
     <div>
-      <h1 class="title">This is some JavaScript projects</h1>
+      <h1 class="title">JavaScript projects</h1>
     </div>
 
-    <div class="container">
-      <div class="memory">
-        <!--HTML fo memorise number project -->
-        <div class="card">
+    <main class="container">
+      <!-- Memory Game -->
+      <section id="memory">
+        <div class="memory-card">
           <h2>Can you memorize?</h2>
 
           <div class="memory-lvl">
             <div class="memory-choice">
               <p class="memory-text">1</p>
-              <input type="radio" name="number" value="1" />
+              <input type="radio" name="level" value="1" />
             </div>
             <div class="memory-choice">
               <p class="memory-text">2</p>
-              <input type="radio" name="number" value="2" />
+              <input type="radio" name="level" value="2" />
             </div>
             <div class="memory-choice">
               <p class="memory-text">3</p>
-              <input type="radio" name="number" value="3" />
+              <input type="radio" name="level" value="3" />
             </div>
             <div class="memory-choice">
               <p class="memory-text">4</p>
-              <input type="radio" name="number" value="4" />
+              <input type="radio" name="level" value="4" />
             </div>
             <div class="memory-choice">
               <p class="memory-text">5</p>
-              <input type="radio" name="number" value="5" />
+              <input type="radio" name="level" value="5" />
             </div>
           </div>
-          <div class="startMemory" id="ready">
-            <p class="memory-text" id="displayNumber">Select a level</p>
-            <button class="button-8" onclick="startMemoryGame()">
+          <div class="memory-start" id="ready">
+            <p class="memory-text" id="display-number">Select a level</p>
+            <button class="button-m" onclick="startMemoryGame()">
               I'm Ready
             </button>
           </div>
@@ -51,25 +51,25 @@
             <div class="memory-input-container">
               <input
                 class="memory-input"
-                type="text"
-                id="userNumber"
+                type="number"
+                id="user-number"
                 placeholder="Do you remember?"
               />
-              <button class="button-8" onclick="checkNumber()">
+              <button class="button-m" onclick="checkNumber()">
                 I remember!
               </button>
             </div>
             <div>
               <p class="memory-text" id="memory-result"></p>
-              <button class="button-8" onclick="resetMemoryGame()">
+              <button class="button-m" onclick="resetMemoryGame()">
                 Reset
               </button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!--HTML fo rock paper project -->
-      <div class="rock">
+      <section id="rock">
         <div class="rock-card">
           <div>
             <h2 id="player-score"></h2>
@@ -96,9 +96,9 @@
             />
           </div>
         </div>
-      </div>
+      </section>
       <!-- HTML for Quizz project -->
-      <div class="quizz">
+      <section id="quizz">
         <div class="card">
           <div id="quiz-container">
             <div id="question-container">
@@ -118,15 +118,16 @@
             <p id="quiz-result"></p>
           </div>
         </div>
-      </div>
-
+      </section>
       <!-- HTML for Counter project -->
-      <div class="counter">
-        <h2 id="result">0</h2>
-        <button class="button" id="upButton">Add 1</button>
-        <button class="button" id="downButton">Remove 1</button>
-        <button class="button" id="resetButton">Reset</button>
-      </div>
-    </div>
+      <section id="counter">
+        <div class="counter">
+          <h2 id="result">0</h2>
+          <button class="button" id="upButton">Add 1</button>
+          <button class="button" id="downButton">Remove 1</button>
+          <button class="button" id="resetButton">Reset</button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
