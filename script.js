@@ -1,3 +1,99 @@
+// Memory game project
+let generatedNumber = 0;
+
+function randomNumber(level) {
+  let minDigit = 1000 * Math.pow(10, level - 1);
+  generatedNumber = Math.floor(minDigit + Math.random() * (9 * minDigit));
+  return generatedNumber;
+}
+
+function startMemoryGame() {
+  if (document.getElementById("displayNumber").innerHTML == "Select a level") {
+    return;
+  }
+  document.getElementById("ready").style.display = "none";
+  document.getElementById("user-input").style.display = "block";
+}
+
+function checkNumber() {
+  let userInput = document.getElementById("userNumber").value;
+  if (userInput == generatedNumber) {
+    document.getElementById("memory-result").innerHTML = "Correct";
+  } else {
+    document.getElementById("memory-result").innerHTML = "Incorrect";
+  }
+}
+
+function resetMemoryGame() {
+  document.getElementById("ready").style.display = "flex";
+  document.getElementById("user-input").style.display = "none";
+  document.getElementById("memory-result").innerHTML = "";
+  document.getElementById("userNumber").value = "";
+  document.getElementById("displayNumber").innerHTML = "Select a level";
+}
+
+var memoryLvl = document.querySelectorAll('input[name="number"]');
+memoryLvl.forEach((element) => {
+  element.addEventListener("click", () => {
+    document.getElementById("displayNumber").innerHTML = randomNumber(
+      element.value
+    );
+  });
+});
+
+// Rock paper project
+
+let playerScore = 0;
+let computerScore = 0;
+
+function setScore() {
+  document.getElementById("player-score").textContent =
+    "Player: " + playerScore;
+  document.getElementById("computer-score").textContent =
+    "CPU: " + computerScore;
+}
+
+function computerPlay() {
+  const options = ["Rock", "Paper", "Scissor"];
+  return options[Math.floor(Math.random() * 3)];
+}
+
+function comparePlay(playerSelection) {
+  const computerSelection = computerPlay();
+  let result = "";
+  if (playerSelection === computerSelection) {
+    result = "Draw";
+  } else {
+    switch (playerSelection) {
+      case "Rock":
+        result = computerSelection === "Paper" ? "Lose" : "Win";
+        break;
+      case "Paper":
+        result = computerSelection === "Scissor" ? "Lose" : "Win";
+        break;
+      case "Scissor":
+        result = computerSelection === "Rock" ? "Lose" : "Win";
+        break;
+    }
+  }
+  if (result === "Win") playerScore++;
+  else if (result === "Lose") computerScore++;
+  document.getElementById("rock-result").innerHTML =
+    result + " , P: " + playerSelection + " C: " + computerSelection;
+  setScore();
+}
+
+setScore();
+document.getElementById("rock-img").addEventListener("click", () => {
+  comparePlay("Rock");
+});
+document.getElementById("paper-img").addEventListener("click", () => {
+  comparePlay("Paper");
+});
+document.getElementById("scissors-img").addEventListener("click", () => {
+  comparePlay("Scissor");
+});
+
 // Quiz project
 
 const questions = [

@@ -138,3 +138,120 @@ h2 {
 .button:hover:before {
   background-color: #6dcff6;
 }
+.rock-choice {
+  width: auto;
+  height: auto;
+}
+.rock-choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20vw;
+  height: 8vh;
+}
+.rock-card {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  padding: 25px;
+}
+.rps {
+  cursor: pointer;
+}
+
+.memory-lvl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.memory-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.startMemory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.memory-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #266db6;
+}
+.user-turn {
+  margin-top: 2rem;
+  display: none;
+}
+
+/* CSS */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+.memory-input {
+  border: 2px solid transparent;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+  flex-basis: 66.66%;
+  margin-right: 1rem;
+}
+
+.memory-input:hover,
+.memory-input:focus {
+  border: 2px solid #4a9dec;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+.memory-input-container {
+  display: flex;
+}
